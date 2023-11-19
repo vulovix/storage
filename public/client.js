@@ -72,6 +72,7 @@ if (form) {
 
     if (!files) {
       alert("Please select an image before trying to upload it.");
+      return;
     }
 
     if (!window.confirm("Do you really want to upload selected image?")) {
