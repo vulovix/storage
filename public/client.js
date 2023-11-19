@@ -61,7 +61,6 @@ if (fileField) {
       uploadImageButton.classList.remove("hidden");
       removeImageButton.classList.remove("hidden");
       reader.readAsDataURL(file);
-    } else {
     }
   });
 }
@@ -72,7 +71,11 @@ if (form) {
     const files = fileField.files[0];
 
     if (!files) {
-      alert("Please select an image.");
+      alert("Please select an image before trying to upload it.");
+    }
+
+    if (!window.confirm("Do you really want to upload selected image?")) {
+      return;
     }
 
     const signatureResponse = await axios.get("/get-signature");
