@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root[theme="dark"] {
+    --text: #FFF;
+    --background: #000;
+    --background-invert: #FFF;
+    --primary: #CEEBFE;
+    --primary-dark: #6FA2C3;
+    --warning: #FEEFD2;
+    --success: #DEF6F6;
+    --accent: #FFDEEF;
+    --accent-dark: #F9B1D6;
+    --border: #131313;
+    --border-dark: #0f0f0f;
+}
+
+:root[theme="light"] {
+    --text: #333;
+    --background: #ffffff;
+    --background-invert: #000;
+    --primary: #CEEBFE;
+    --primary-dark: #6FA2C3;
+    --warning: #FEEFD2;
+    --success: #DEF6F6;
+    --accent: #FFDEEF;
+    --accent-dark: #F9B1D6;
+    --border: #ececec;
+    --border-dark: #ddd;
+}
+
+html, body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Roboto Condensed, sans-serif;
+    -webkit-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    min-width: 480px;
+    max-width: 940px;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    border-radius: 4px;
+    flex-direction: column;
+    border: 2px solid var(--text);
+    background-color: white;
+}
+
+.container footer {
+    display: flex;
+    gap: 1rem;
+}
+
+.container footer button{
+    flex: 1;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 600;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#imageIcon {
+    max-width: 400px;
+    aspect-ratio: 4/3;
+    border-radius: 4px;
+}
+
+button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 12px 12px;
+    background-color: #000;
+    /* text-transform: uppercase; */
+}
+
+.container ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.container ul {
+    max-height: 400px;
+    overflow: auto;
+}
+.container ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.container ul li button {
+    visibility: hidden;
+}
+
+.container ul li:hover {
+    border: 2px solid black;
+}
+
+.container ul li:hover button {
+    visibility: visible;
+}
+
+.container form {
+    flex: 1;
+}
+
+.container ul li button,
+.container ul li strong {
+    flex: 1;
+    color: black;
+    background: white;
+}
+.container ul li button:hover{
+    text-decoration: underline;
+}
+.galleryImage{
+    max-width: 200px;
+}
