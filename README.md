@@ -1,3 +1,3 @@
-# Files by Komplexica
+# Storage
 
-[files.komplexica.com](https://files.komplexica.com)
+[storage.komplexica.com](https://storage.komplexica.com)
